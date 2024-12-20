@@ -1,69 +1,28 @@
-# Getting Started with Create React App
+Approach to Building the Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The dashboard was built with a component-driven architecture using React and Tailwind CSS to ensure modularity, reusability, and a clean design. The layout comprises three main sections: a sidebar for navigation, a top progress bar, and a content area for forms and actions.
 
-## Available Scripts
+The sidebar was designed to provide consistent navigation, while the top progress bar visually tracks the user's progress through the claim filing process. The content area dynamically adapts to display forms and actions based on the user's workflow. Tailwind CSS was used to manage layout, spacing, and responsiveness, ensuring the design is flexible and modern. To ensure accessibility and usability, proper labels and placeholders were added to form elements.
 
-In the project directory, you can run:
+Challenges Faced and Resolutions
 
-### `npm start`
+Alignment Issues: Initially, the sidebar and main content overlapped due to improper flexbox configuration. This was resolved by structuring the layout with flex containers and appropriately allocating flex-grow properties to ensure equal space distribution.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Responsive Design: Ensuring the layout worked seamlessly across various screen sizes required careful testing and adjustments. Media queries and Tailwind's responsive utilities were employed to make the design adaptable.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Element Spacing and Margins: Overlapping and inconsistent spacing between elements was another challenge. This was addressed by systematically using Tailwind’s spacing utilities like mt, mb, and p to maintain consistent margins and paddings.
 
-### `npm test`
+Visual Hierarchy: Distinguishing between the primary and secondary sections proved tricky in initial iterations. Adjustments such as adding subtle borders, background colors, and shadow effects improved clarity.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Assumptions Made
 
-### `npm run build`
+User Navigation: Users will primarily interact with the sidebar and top progress bar to navigate through different stages of the claim filing process.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Standardized Inputs: The form fields assume standard inputs (e.g., USD for currency). Additional validation mechanisms can be added later based on user requirements.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Design Consistency: Assumed that a minimalistic design with a focus on usability would align with user expectations, avoiding overly complex layouts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Browser Compatibility: The application is intended for modern browsers that support Flexbox and Tailwind CSS.
 
 ### `npm run build` fails to minify
 
